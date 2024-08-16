@@ -8,7 +8,7 @@ function Home() {
   const [todos, setTodos] = useState([]) // State to save todos
 
   const handleEdit = (id) => {
-    axios.put("https://todoapp-backend-hto7.onrender.com/" + id)
+    axios.put("https://todoapp-backend-hto7.onrender.com/update/" + id)
       .then(result => {
         location.reload()
       })
@@ -17,7 +17,7 @@ function Home() {
       })
   }
   const handleDelete = (id) => {
-    axios.delete("https://todoapp-backend-hto7.onrender.com/" + id)
+    axios.delete("https://todoapp-backend-hto7.onrender.com/delete/" + id)
       .then(result => {
         location.reload()
       })
